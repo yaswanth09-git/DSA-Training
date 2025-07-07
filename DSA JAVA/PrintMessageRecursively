@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class PrintMessageRecursively {
+    static void printMessage(String message, int n) {
+        if (n == 0) {
+            return;
+        }
+        System.out.println(message);
+        printMessage(message, n - 1);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the message to print: ");
+        String message = scanner.nextLine();
+        System.out.print("Enter how many times to print the message: ");
+        int n = scanner.nextInt();
+        printMessage(message, n);
+        scanner.close();
+    }
+}
